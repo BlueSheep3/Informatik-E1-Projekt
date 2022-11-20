@@ -1,4 +1,4 @@
-"strict mode";
+"use strict";
 
 let seed;
 

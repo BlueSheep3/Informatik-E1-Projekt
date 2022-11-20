@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./numpad.css">
+	<script src="./numpad.js"></script>
+	<title>Numpad Testing Page</title>
+</head>
+<body>
+	<div id="main">
+		<div id="codediv">
+			<p id="code"></p>
+		</div>
+		<table id="numpad">
+			<tr>
+				<td class="num" id="1" onclick="onClick(1)">1</td>
+				<td class="num" id="2" onclick="onClick(2)">2</td>
+				<td class="num" id="3" onclick="onClick(3)">3</td>
+			</tr>
+			<tr>
+				<td class="num" id="4" onclick="onClick(4)">4</td>
+				<td class="num" id="5" onclick="onClick(5)">5</td>
+				<td class="num" id="6" onclick="onClick(6)">6</td>
+			</tr>
+			<tr>
+				<td class="num" id="7" onclick="onClick(7)">7</td>
+				<td class="num" id="8" onclick="onClick(8)">8</td>
+				<td class="num" id="9" onclick="onClick(9)">9</td>
+			</tr>
+			<tr>
+				<td class="num" id="deleteButton" onclick="onClickDelete()">X</td>
+				<td class="num" id="0" onclick="onClick(0)">0</td>
+				<td class="num" id="confirmButton" onclick="onClickConfirm()">V</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

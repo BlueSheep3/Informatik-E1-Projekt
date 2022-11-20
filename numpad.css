@@ -2,6 +2,8 @@ body {
 	background-color: #181818;
 	color: white;
 	text-align: center;
+	cursor: default;
+	user-select: none;
 }
 
 #main {
@@ -27,8 +29,6 @@ body {
 .num {
 	font-size: 10vh;
 	width: 33.333%;
-	cursor: default;
-	user-select: none;
 	background-color: #202020;
 }
 

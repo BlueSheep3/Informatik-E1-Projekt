@@ -1,15 +1,3 @@
-body {
-	background-color: #181818;
-	color: white;
-	text-align: center;
-	font-family: "Determination Mono";
-}
-
-@font-face {
-	font-family: "Determination Mono";
-	src: url("./DTM-Mono.otf") format("opentype");
-}
-
 h1 {
 	font-weight: normal;
 	font-size: 40px;

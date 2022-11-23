@@ -1,0 +1,40 @@
+html {
+    text-align: center;
+    padding: 0;
+    background-color: #181818;
+    color: white;
+    font-family: "Determination Mono";
+    box-sizing: border-box;
+    font-size: 2vh;
+}
+
+@font-face {
+	font-family: "Determination Mono";
+	src: url("./DTM-Mono.otf") format("opentype");
+}
+
+#text {
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+    color: #00ff00;
+}
+
+#Button-A {
+    display:inline-block;
+	text-decoration:none;
+	font-family:Arial;
+	font-size:20px;
+	border:none;
+	border-radius:15px;
+	color:#000000;
+	background-color: rgb(255, 255, 255);
+	padding:5px 15px;
+	font-weight:bold;
+	box-shadow:3px 3px 4px #000000;
+	text-shadow:1px 1px 2px #ffffff;
+    position: absolute;
+    height: 25px;
+    width: 75px;
+    top: 5%;
+    left: 93%;
+}

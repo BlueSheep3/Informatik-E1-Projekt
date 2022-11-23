@@ -24,7 +24,7 @@ function onClickConfirm() {
 	let code = document.getElementById("code");
 	let correctCode = seed ?? "69420";
 	if(code.textContent == correctCode) {
-		window.location.href = "./testing.html";
+		window.location.href = "./testing/testing.html";
 	} else {
 		code.style = "color: #b02020";
 		setTimeout(() => {

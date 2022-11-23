@@ -1,9 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./style.css">
 	<link rel="stylesheet" href="./numpad.css">
 	<script src="./numpad.js"></script>
@@ -31,9 +27,9 @@
 				<td class="num" onclick="onClick(9)">9</td>
 			</tr>
 			<tr>
-				<td class="num" onclick="onClickDelete()">X</td>
+				<td class="num" id="deleteButton" onclick="onClickDelete()">X</td>
 				<td class="num" onclick="onClick(0)">0</td>
-				<td class="num" onclick="onClickConfirm()">V</td>
+				<td class="num" id="confirmButton" onclick="onClickConfirm()">V</td>
 			</tr>
 		</table>
 	</div>

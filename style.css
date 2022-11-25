@@ -1,5 +1,5 @@
 html {
-    background-color: #181818;
+    background-color: black;
 }
 
 * {
@@ -9,6 +9,7 @@ html {
     font-family: "Determination Mono";
     box-sizing: border-box;
     font-size: 2vh;
+	user-select: none;
 }
 
 @font-face {
@@ -16,6 +17,6 @@ html {
 	src: url("/other assets/DTM-Mono.otf") format("opentype");
 }
 
-button { background-color: #303030; }
-button:hover { background-color: #383838; }
+button { background-color: #202020; }
+button:hover { background-color: #303030; }
 button:active { background-color: #404040; }

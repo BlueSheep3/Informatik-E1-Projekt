@@ -13,6 +13,9 @@ body {
 	background-color: #104010;
 	width: 100%;
 	height: 12.5vh;
+}
+
+p#code {
 	font-size: 10vh;
 	color: #20a020;
 }

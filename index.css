@@ -1,38 +1,16 @@
-#text {
-    padding-top: 10vh;
-    padding-bottom: 10vh;
+button {
+	font-size: 8vh;
+	margin-top: 5vh;
 }
 
-span {
-	color: #00ff00;
-	font-size: 3.5vh;
+h1 {
+	margin-top: 10vh;
+	font-size: 5vh;
 }
 
-#Button-A {
-    display:inline-block;
-	text-decoration:none;
-	font-family:Arial;
-	font-size:20px;
-	border:none;
-	border-radius:15px;
-	color:#000000;
-	background-color: rgb(255, 255, 255);
-	padding:5px 15px;
-	font-weight:bold;
-	box-shadow:3px 3px 4px #000000;
-	text-shadow:1px 1px 2px #ffffff;
-    position: absolute;
-    height: 25px;
-    width: 75px;
-    top: 5%;
-    left: 93%;
-}
-
-#written, #notwritten {
-	white-space: pre-line;
-}
-
-#notwritten {
-	color: transparent;
-	user-select: none;
+div#center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }

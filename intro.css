@@ -1,0 +1,40 @@
+#text {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+
+span {
+	color: #00ff00;
+	font-size: 3.5vh;
+}
+
+button {
+	font-size: 5vh;
+	margin-left: 2vh;
+	margin-right: 2vh;
+}
+
+button.swapped {
+	transition: .15s;
+}
+
+button#buttonAccept.swapped:not(.in) {
+	margin-right: -25vh;
+}
+
+button#buttonDecline.swapped:not(.in) {
+	margin-left: -25vh;
+}
+
+button:not(.swapped) {
+	transition: .15s;
+}
+
+#written, #notwritten {
+	white-space: pre-line;
+}
+
+#notwritten {
+	color: transparent;
+	user-select: none;
+}

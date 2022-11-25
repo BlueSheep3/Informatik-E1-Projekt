@@ -13,26 +13,9 @@ html {
 
 @font-face {
 	font-family: "Determination Mono";
-	src: url("./DTM-Mono.otf") format("opentype");
+	src: url("/other assets/DTM-Mono.otf") format("opentype");
 }
 
-#text {
-    padding-top: 20vh;
-    padding-bottom: 20vh;
-    color: #00ff00;
-}
-
-#Button-A {
-    display:inline-block;
-	text-decoration:none;
-	font-family:Arial;
-	font-size:20px;
-	border:none;
-	border-radius:15px;
-	padding:5px 15px;
-	font-weight:bold;
-	box-shadow:3px 3px 4px #000000;
-    position: absolute;
-    height: 25px;
-    width: 75px;
-}
+button { background-color: #303030; }
+button:hover { background-color: #383838; }
+button:active { background-color: #404040; }

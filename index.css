@@ -1,11 +1,26 @@
+#Start {
+	padding-left: 6vh;
+	padding-right: 6vh;
+}
+
+
 button {
 	font-size: 8vh;
 	margin-top: 5vh;
+	transition: 0.15s;
+	background-color: black;
+	color: #00ff00;
+	border-width: 2px;
+	border-color: #00ff00;
+	padding: 10px;
+	font-family: "Determination Mono";
+	border-radius: 20px;
 }
 
 h1 {
 	margin-top: 10vh;
 	font-size: 5vh;
+	color: #00ff00;
 }
 
 div#center {
@@ -14,3 +29,4 @@ div#center {
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
+

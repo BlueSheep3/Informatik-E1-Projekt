@@ -20,11 +20,10 @@ button {
 	transition: .15s;
 	background-color: black;
 	color: #00ff00;
-	border-width: 2px;
+	border-width: 0.3vh;
 	border-color: #00ff00;
-	padding: 10px;
-	font-family: "Determination Mono";
-	border-radius: 20px;
+	padding: 1.5vh;
+	border-radius: 3vh;
 }
 
 button#buttonAccept.swapped {
@@ -32,7 +31,7 @@ button#buttonAccept.swapped {
 }
 
 button#buttonDecline.swapped {
-	margin-left: -25vh;
+	margin-left: -29vh;
 }
 
 #written, #notwritten {

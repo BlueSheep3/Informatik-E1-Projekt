@@ -23,7 +23,7 @@ function clickButton() {
 function explode() {
 	let expl = document.createElement("img");
 	expl.id = "explosion";
-	expl.src = "/images/explosion.gif";
+	expl.src = "../images/explosion.gif";
 	expl.alt = "boom!";
 	document.body.appendChild(expl);
 

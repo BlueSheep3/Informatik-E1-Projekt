@@ -14,7 +14,7 @@ html {
 
 @font-face {
 	font-family: "Determination Mono";
-	src: url("/other assets/DTM-Mono.otf") format("opentype");
+	src: url("./other assets/DTM-Mono.otf") format("opentype");
 }
 
 button { background-color: #202020; }

@@ -1,5 +1,3 @@
-"use strict";
-
 window.onload = function() {
 	const urlParams = new URLSearchParams(window.location.search);
 	if(urlParams.get("v") != null)

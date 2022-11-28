@@ -1,13 +1,14 @@
-let speed = 35;
-const urlParams = new URLSearchParams(window.location.search);
-	if(urlParams.get("speed") != null)
-		speed = urlParams.get("speed");
-
 let interval = null;
-if(speed > 0)
-	interval = setInterval(updateText, speed);
-else
-	setTimeout(typeAllText, 5);
+
+window.onload = function() {
+	const urlParams = new URLSearchParams(window.location.search);
+	let speed = urlParams.get("speed") ?? 35;
+
+	if(speed > 0)
+		interval = setInterval(updateText, speed);
+	else
+		typeAllText();
+}
 
 function updateText() {
 	let written = document.getElementById("written");

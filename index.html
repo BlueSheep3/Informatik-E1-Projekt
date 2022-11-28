@@ -2,15 +2,16 @@
 <head>
 	<link rel="stylesheet" href="./style.css">
 	<link rel="stylesheet" href="./index.css">
+	<script src="./global.js"></script>
 	<script src="./index.js"></script>
-	<title>Informatik E1 Projekt</title>
+	<title>cs_projekt_e1/startpage.exe</title>
 </head>
 <body>
 	<h1>We need to come up with a Name!</h1>
 	<div id="center">
-		<a href="./pages/start/intro.html"><button id="start">START</button></a><br>
-		<a href="./pages/start/options.html"><button>OPTIONS</button></a><br>
-		<a href="./pages/start/credits.html"><button>CREDITS</button></a>
+		<button onclick="clickStart()" id="start">START</button><br>
+		<button onclick="gotoUrl('./pages/start/options', '')">OPTIONS</button><br>
+		<button onclick="gotoUrl('./pages/start/credits', '')">CREDITS</button>
 	</div>
 </body>
 </html>

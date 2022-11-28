@@ -1,6 +1,6 @@
 let urlData;
 
-function loadUrlData() {
+{
 	const urlParams = new URLSearchParams(window.location.search);
 
 	let seed = urlParams.get("s") ?? "0";

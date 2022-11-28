@@ -1,16 +1,10 @@
 let interval = null;
 
 window.onload = function() {
-	loadUrlData();
-	console.log(urlData.seed);
-
 	const urlParams = new URLSearchParams(window.location.search);
 	let speed = urlParams.get("speed") ?? 35;
 
-	if(speed > 0)
-		interval = setInterval(updateText, speed);
-	else
-		typeAllText();
+	interval = setInterval(updateText, speed);
 }
 
 function updateText() {
@@ -28,7 +22,7 @@ function updateText() {
 	notWritten.textContent = notWritten.textContent.substring(1);
 }
 
-function typeAllText() {
+function skipText() {
 	let written = document.getElementById("written");
 	let notWritten = document.getElementById("notwritten");
 	if(notWritten.textContent == "") return;
@@ -50,5 +44,5 @@ function swapButtons() {
 document.onkeydown = function(e) {
 	if(e.key != "Escape") return;
 	if(interval != null) clearInterval(interval);
-	typeAllText();
+	skipText();
 }

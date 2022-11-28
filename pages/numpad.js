@@ -1,11 +1,3 @@
-let seed;
-
-window.onload = function() {
-	const urlParams = new URLSearchParams(window.location.search);
-	if(urlParams.get("s") != null)
-		seed = parseInt(urlParams.get("s"));
-}
-
 function onClick(n) {
 	let code = document.getElementById("code");
 	if(code.textContent.length >= 6) return;
@@ -20,9 +12,9 @@ function onClickDelete() {
 
 function onClickConfirm() {
 	let code = document.getElementById("code");
-	let correctCode = seed ?? "69420";
+	let correctCode = seed; // todo: use seeded rng
 	if(code.textContent == correctCode) {
-		window.location.href = "../testing/testing.html";
+		gotoUrl("../testing/testing.html", "");
 	} else {
 		code.style = "color: #b02020";
 		setTimeout(() => {

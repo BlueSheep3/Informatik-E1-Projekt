@@ -1,6 +1,9 @@
 let interval = null;
 
 window.onload = function() {
+	loadUrlData();
+	console.log(urlData.seed);
+
 	const urlParams = new URLSearchParams(window.location.search);
 	let speed = urlParams.get("speed") ?? 35;
 

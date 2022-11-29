@@ -14,7 +14,6 @@ button {
 }
 
 #soul {
-	image-rendering: pixelated;
 	position: relative;
 	height: 10vh;
 	width: 10vh;
@@ -32,8 +31,6 @@ button {
 }
 
 #explosion {
-	/* margin-top: 3%; */
 	height: 20%;
 	width: 20%;
-	image-rendering: pixelated;
 }

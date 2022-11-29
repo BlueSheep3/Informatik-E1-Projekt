@@ -1,5 +1,6 @@
-html {
+body {
     background-color: black;
+	overflow: hidden;
 }
 
 * {
@@ -15,6 +16,14 @@ html {
 @font-face {
 	font-family: "Determination Mono";
 	src: url("./other assets/DTM-Mono.otf") format("opentype");
+}
+
+img#background {
+	height: 100vh;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 button { background-color: #202020; }

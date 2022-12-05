@@ -1,6 +1,19 @@
 let interval = null;
 
-window.onload = function() {
+let textSnd = new Howl({
+	src: ["../../sounds/text.wav"],
+	volume: 1
+});
+
+let hasStartedAnim = false;
+
+window.onclick = startAnim;
+window.onkeydown = startAnim;
+
+function startAnim() {
+	if(hasStartedAnim) return;
+	hasStartedAnim = true;
+
 	const urlParams = new URLSearchParams(window.location.search);
 	let speed = urlParams.get("speed") ?? 35;
 
@@ -18,6 +31,10 @@ function updateText() {
 		return;
 	}
 
+	if(c.trim() != "") {
+		textSnd.stop();
+		textSnd.play();
+	}
 	written.textContent += c;
 	notWritten.textContent = notWritten.textContent.substring(1);
 }

@@ -1,3 +1,8 @@
+let explSnd = new Howl({
+	src: ["../sounds/explosion.wav"],
+	volume: 1
+});
+
 window.onload = function() {
 	const urlParams = new URLSearchParams(window.location.search);
 	if(urlParams.get("v") != null)
@@ -25,7 +30,8 @@ function explode() {
 	expl.alt = "boom!";
 	document.body.appendChild(expl);
 
-	document.getElementById("explSound").play();
+	// document.getElementById("explSound").play();
+	explSnd.play();
 
 	setTimeout(function() { expl.remove(); }, 1000);
 }

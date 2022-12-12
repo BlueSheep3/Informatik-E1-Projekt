@@ -1,10 +1,4 @@
 let interval = null;
-
-let textSnd = new Howl({
-	src: ["../../sounds/text.wav"],
-	volume: 1
-});
-
 let hasStartedAnim = false;
 
 window.onclick = startAnim;
@@ -32,8 +26,10 @@ function updateText() {
 	}
 
 	if(c.trim() != "") {
-		textSnd.stop();
-		textSnd.play();
+		new Howl({
+			src: ["../../sounds/text.wav"],
+			volume: 0.5
+		}).play();
 	}
 	written.textContent += c;
 	notWritten.textContent = notWritten.textContent.substring(1);

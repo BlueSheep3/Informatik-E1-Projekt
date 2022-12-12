@@ -7,13 +7,3 @@
 	color: black;
 	user-select: none;
 }
-
-body {
-	background-color: black;
-}
-
-p {
-	text-align: center;
-	color: white;
-	font-size: 2vh;
-}

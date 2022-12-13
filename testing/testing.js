@@ -15,7 +15,7 @@ function clickButton() {
 	document.title = "You clicked the Button!";
 
 	if(document.getElementById("soul") != null) {
-		let pos = getSoulPos();
+		let pos = getCharaPos();
 		if(pos.x > -17 && pos.x < 17 && pos.y > 35 && pos.y < 65)
 			document.getElementById("soul").remove();
 	}
@@ -67,7 +67,7 @@ document.onkeydown = function(e) {
 	if(e.key.toLowerCase() == "s") input.down = true;
 
 	if(e.key == "Enter" && document.getElementById("coolbutton") != null) {
-		let pos = getSoulPos();
+		let pos = getCharaPos();
 		if(pos.x > -22 && pos.x < 22 && pos.y > 42 && pos.y < 58) {
 			document.getElementById("soul").remove();
 			clickButton();
@@ -85,24 +85,24 @@ document.onkeyup = function(e) {
 function frame() {
 	if(document.getElementById("soul") == null) return;
 
-	let pos = getSoulPos();
+	let pos = getCharaPos();
 
 	if(input.right) pos.x += 1;
 	if(input.left) pos.x -= 1;
 	if(input.up) pos.y -= 1;
 	if(input.down) pos.y += 1;
 
-	setSoulPos(pos);
+	setCharaPos(pos);
 }
 
-function getSoulPos() {
+function getCharaPos() {
 	let soul = document.getElementById("soul");
 	let x = parseInt(soul.style.left.substring(0, soul.style.left.length - 2));
 	let y = parseInt(soul.style.top.substring(0, soul.style.top.length - 2));
 	return {x,y};
 }
 
-function setSoulPos(pos) {
+function setCharaPos(pos) {
 	let soul = document.getElementById("soul");
 	soul.style.left = pos.x + "vh";
 	soul.style.top = pos.y + "vh";

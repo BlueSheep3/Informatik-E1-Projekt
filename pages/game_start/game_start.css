@@ -1,3 +1,15 @@
 body {
 	background-image: url("../../images/backgrounds/game_start.png");
 }
+
+#chara {
+	position: relative;
+	height: 30vh;
+	transform: translate(0vh, -15vh);
+}
+
+#charaDiv {
+	display: flex;
+	justify-content: center;
+	height: 0;
+}

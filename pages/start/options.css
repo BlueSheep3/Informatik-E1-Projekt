@@ -1,0 +1,11 @@
+button {
+	margin: auto;
+	font-size: 7vh;
+	background-color: black;
+	color: #00ff00;
+	border-width: 0.3vh;
+	border-color: #00ff00;
+	padding: 1.5vh;
+	border-radius: 3vh;
+	margin: 5vh;
+}

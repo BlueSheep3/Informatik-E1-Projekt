@@ -20,10 +20,3 @@ h1 {
 	font-size: 5vh;
 	color: #00ff00;
 }
-
-div#center {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}

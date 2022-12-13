@@ -25,3 +25,10 @@ body {
 button { background-color: #202020; }
 button:hover { background-color: #303030; }
 button:active { background-color: #404040; }
+
+div#center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}

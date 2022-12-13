@@ -1,0 +1,8 @@
+body {
+	background-color: white;
+}
+
+* {
+	user-select: initial;
+	font-size: 10vh;
+}

@@ -8,6 +8,8 @@ function startAnim() {
 	if(hasStartedAnim) return;
 	hasStartedAnim = true;
 
+	document.getElementById("pressbuttonhint").remove();
+
 	const urlParams = new URLSearchParams(window.location.search);
 	let speed = urlParams.get("speed") ?? 35;
 

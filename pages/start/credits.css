@@ -12,4 +12,6 @@
 .head {
     font-size: 3.2vh;
     color: #00ff00;
+    position: relative;
+    margin-bottom: -32px;
 }

@@ -1,0 +1,11 @@
+.fail h1 {
+    color: #00ff00;
+    font-size: 6vh;
+    text-align: center;
+    margin-top: 30vh;
+}
+
+.fail p {
+    color: #00ff00;
+    font-size: 5vh;
+}

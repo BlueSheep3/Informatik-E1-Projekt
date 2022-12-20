@@ -10,8 +10,8 @@
 </head>
 <body>
 	<div id="text">
-		<p id="auftrag">You have a new Task:</p>
-		<!-- <p id="auftrag">Sie haben einen neuen Auftrag:</p> -->
+		<p id="task">You have a new Task:</p>
+		<!-- <p id="task">Sie haben einen neuen Auftrag:</p> -->
 		<p>
 			<span id="written"></span><span id="notwritten">
              > Steal the Decleration of Indepandence.
@@ -39,7 +39,7 @@ Mission bekommen Sie $1.000.000.000
 <footer>
 	<div id="buttons" class="hidden">
 		<button id="buttonAccept" onclick="gotoUrl('../game_start/game_start', '')">Accept</button>
-		<button id="buttonDecline" onmouseover="swapButtons()">Decline</button>
+		<button id="buttonDecline" onmouseover="swapButtons()" onclick="gotoUrl('./intro_decline', '')">Decline</button>
 	</div>
 </footer>
 </html>

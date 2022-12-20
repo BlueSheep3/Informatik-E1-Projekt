@@ -4,8 +4,9 @@ body {
 
 #chara {
 	position: relative;
-	height: 30vh;
-	transform: translate(0vh, -15vh);
+	height: 20vh;
+	/* transform: translate(0vh, -10vh); */
+	translate: 0vh -10vh;
 }
 
 #charaDiv {

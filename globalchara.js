@@ -17,7 +17,8 @@ document.onkeyup = function(e) {
 setInterval(frame, 20);
 
 function frame() {
-	if(document.getElementById("chara") == null) return;
+	let chara = document.getElementById("chara");
+	if(chara == null) return;
 
 	let inputVec = { x: 0, y: 0 };
 
@@ -26,6 +27,15 @@ function frame() {
 	if(!hasGravity) {
 		if(input.w) inputVec.y--;
 		if(input.s) inputVec.y++;
+	}
+
+	if(inputVec.x > 0) {
+		if(chara.classList.contains("mirrorX"))
+			chara.classList.remove("mirrorX");
+	}
+	if(inputVec.x < 0) {
+		if(!chara.classList.contains("mirrorX"))
+			chara.classList.add("mirrorX");
 	}
 
 	let mag = Math.sqrt(inputVec.x ** 2 + inputVec.y ** 2);

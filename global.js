@@ -16,7 +16,10 @@ let urlData;
 	};
 }
 
+let hasUsedGoto = false;
 function gotoUrl(url, actions) {
+	if(hasUsedGoto) return;
 	let params = `?s=${urlData.seed}&d=&o=&a=${actions}`;
 	window.location.href = url + ".html" + params;
+	hasUsedGoto = true;
 }

@@ -12,7 +12,7 @@ function onClickDelete() {
 
 function onClickConfirm() {
 	let code = document.getElementById("code");
-	let correctCode = seed; // todo: use seeded rng
+	let correctCode = urlData.seed; // todo: use seeded rng
 	if(code.textContent == correctCode) {
 		gotoUrl("../testing/testing.html", "");
 	} else {

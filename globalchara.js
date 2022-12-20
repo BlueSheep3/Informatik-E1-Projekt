@@ -1,10 +1,12 @@
 let input = { w: false, a: false, s: false, d: false };
 let velocity = { x: 0, y: 0 };
 let hasGravity = false;
+let groundHeight = 90;
 
 document.onkeydown = function(e) {
 	let c = e.key.toLowerCase();
 	if("wasd".includes(c)) input[c] = true;
+	if(c == " " && getCharaPos().y >= groundHeight) velocity.y = -4;
 }
 
 document.onkeyup = function(e) {
@@ -29,16 +31,21 @@ function frame() {
 	let mag = Math.sqrt(inputVec.x ** 2 + inputVec.y ** 2);
 
 	if(mag != 0) {
-		velocity.x += inputVec.x * 0.55 / mag;
-		velocity.y += inputVec.y * 0.55 / mag;
+		velocity.x += inputVec.x * 0.65 / mag;
+		velocity.y += inputVec.y * 0.65 / mag;
 	}
-	velocity.x *= 0.7;
-	velocity.y *= 0.7;
+	velocity.x *= 0.65;
+	if(hasGravity) velocity.y += 0.5;
+	else velocity.y *= 0.65;
 
 	let pos = getCharaPos();
+	if(pos.y >= groundHeight && velocity.y > 0) velocity.y = 0;
 	pos.x += velocity.x;
 	pos.y += velocity.y;
 	setCharaPos(pos);
+
+	if(typeof frame2 !== "undefined")
+		frame2();
 }
 
 function getCharaPos() {

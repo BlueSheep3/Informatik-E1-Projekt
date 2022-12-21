@@ -23,3 +23,11 @@ function gotoUrl(url, actions) {
 	window.location.href = url + ".html" + params;
 	hasUsedGoto = true;
 }
+
+function random(seed, salt) {
+	return Math.abs(Math.sin(seed * 12.9898 + salt * 78.233) * 43758.5453 % 1);
+}
+
+function randomInt(seed, salt, max) {
+	return Math.floor(random(seed, salt) * max);
+}

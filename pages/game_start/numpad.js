@@ -12,7 +12,7 @@ function onClickDelete() {
 
 function onClickConfirm() {
 	let code = document.getElementById("code");
-	let correctCode = urlData.seed; // todo: use seeded rng
+	let correctCode = randomInt(urlData.seed, 4386, 10000);
 	if(code.textContent == correctCode) {
 		gotoUrl("../testing/testing.html", "");
 	} else {

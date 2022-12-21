@@ -1,8 +1,7 @@
 hasGravity = true;
-groundHeight = 83;
+walls = [[-200,83,200,100], [0,75,30,100], [80,0,100,100]];
+triggers = [[-100,0,-30,100]];
 
-function frame2() {
-	if(getCharaPos().x < -30) {
-		gotoUrl("./numpad", "");
-	}
+function onTrigger(trigIndex) {
+	gotoUrl("./numpad", "");
 }

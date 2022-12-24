@@ -1,0 +1,33 @@
+body {
+    background-image: url(../../../images/backgrounds/Sicherheitsraum2.png);
+    min-height: 100vh;
+}
+
+#text p {
+    font-size: 3vh;
+    margin-top: 73vh;
+    margin-right: 30vh;
+    color: #00ff00;
+}
+
+button {
+    font-size: 3vh;
+	margin-left: 6vh;
+	margin-right: 6vh;
+	transition: .15s;
+	background-color: black;
+	color: #00ff00;
+	border-width: 0.3vh;
+	border-color: #00ff00;
+	padding: 1.5vh;
+	border-radius: 3vh;
+}
+
+#button {
+    margin-right: 30vh;
+}
+
+#button2 {
+    padding-left: 70px;
+    padding-right: 70px;
+}

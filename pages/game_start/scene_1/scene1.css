@@ -1,0 +1,28 @@
+body {
+    background-image: url("../../../images/backgrounds/Szene1.png");
+    min-height: 100vh;
+}
+
+.text p {
+    padding-top: 15vh;
+    color: #00ff00;
+    font-size: 3vh;
+}
+
+button {
+    font-size: 3vh;
+	margin-left: 6vh;
+	margin-right: 6vh;
+	transition: .15s;
+	background-color: black;
+	color: #00ff00;
+	border-width: 0.3vh;
+	border-color: #00ff00;
+	padding: 1.5vh;
+	border-radius: 3vh;
+}
+
+#buttonSP {
+   padding-left: 80px;
+   padding-right: 80px;
+}

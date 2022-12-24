@@ -4,6 +4,7 @@ let hasGravity = false;
 let onGround = false;
 let walls = [];
 let triggers = [];
+let canTurnAround = true;
 
 document.onkeydown = function(e) {
 	let c = e.key.toLowerCase();
@@ -31,27 +32,17 @@ function frame() {
 		if(input.s) inputVec.y++;
 	}
 
-	if(inputVec.x > 0) {
-		if(chara.classList.contains("mirrorX"))
-			chara.classList.remove("mirrorX");
-	}
-	if(inputVec.x < 0) {
-		if(!chara.classList.contains("mirrorX"))
-			chara.classList.add("mirrorX");
-	}
+	if(canTurnAround && inputVec.x != 0)
+		setHasClass(chara, "mirrorX", inputVec.x < 0);
 
-	let mag = Math.sqrt(inputVec.x ** 2 + inputVec.y ** 2);
-
-	if(mag != 0) {
-		velocity.x += inputVec.x * 0.65 / mag;
-		velocity.y += inputVec.y * 0.65 / mag;
-	}
+	velocity.x += inputVec.x * 0.65;
+	velocity.y += inputVec.y * 0.65;
 	velocity.x *= 0.65;
 	if(hasGravity) velocity.y += 0.5;
 	else velocity.y *= 0.65;
 
 	onGround = false;
-	let pos = getCharaPos();
+	let pos = getObjIdPos("chara");
 
 	let prevPos = {x: 0, y: 0};
 	prevPos.x = pos.x;
@@ -59,7 +50,7 @@ function frame() {
 	pos.x += velocity.x;
 	pos.y += velocity.y;
 	checkCollision(pos, prevPos);
-	setCharaPos(pos);
+	setObjIdPos("chara", pos);
 
 	if(typeof frame2 !== "undefined")
 		frame2();
@@ -85,15 +76,36 @@ function checkCollision(pos, prevPos) {
 	}
 }
 
-function getCharaPos() {
-	let chara = document.getElementById("chara");
-	let x = parseFloat(chara.style.left.substring(0, chara.style.left.length - 2));
-	let y = parseFloat(chara.style.top.substring(0, chara.style.top.length - 2));
+function getObjPos(obj) {
+	let x = parseFloat(obj.style.left.substring(0, obj.style.left.length - 2));
+	let y = parseFloat(obj.style.top.substring(0, obj.style.top.length - 2));
 	return {x,y};
 }
 
-function setCharaPos(pos) {
-	let chara = document.getElementById("chara");
-	chara.style.left = pos.x + "vh";
-	chara.style.top = pos.y + "vh";
+function getObjIdPos(objId) {
+	return getObjPos(document.getElementById(objId));
+}
+
+function setObjPos(obj, pos) {
+	obj.style.left = pos.x + "vh";
+	obj.style.top = pos.y + "vh";
+}
+
+function setObjIdPos(objId, pos) {
+	setObjPos(document.getElementById(objId), pos);
+}
+
+function spawnObj(objId, className, pos, sprite) {
+	let div = document.createElement("div");
+	div.id = "objDiv";
+	let obj = document.createElement("img");
+	if(objId != "") obj.id = objId;
+	obj.src = sprite;
+	obj.classList.add("obj");
+	if(className != "") obj.classList.add(className);
+	obj.style.left = pos.x + "vh";
+	obj.style.top = pos.y + "vh";
+	div.appendChild(obj);
+	document.getElementsByTagName("body").item(0).prepend(div);
+	return obj;
 }

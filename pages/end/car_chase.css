@@ -1,0 +1,12 @@
+body {
+	background-image: url("../../images/backgrounds/car_chase.gif");
+}
+
+.bullet {
+	height: 4vh;
+	translate: 0vh -2vh;
+}
+
+.front {
+	z-index: 100;
+}

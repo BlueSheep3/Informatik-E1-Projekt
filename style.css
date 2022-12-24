@@ -37,3 +37,15 @@ div#center {
 img.mirrorX {
 	transform: scaleX(-1);
 }
+
+.obj {
+	position: relative;
+	height: 20vh;
+	translate: 0vh -10vh;
+}
+
+#objDiv {
+	display: flex;
+	justify-content: center;
+	height: 0;
+}

@@ -1,6 +1,7 @@
 #start {
 	padding-left: 6vh;
 	padding-right: 6vh;
+	margin-top: 15vh;
 }
 
 button {
@@ -19,4 +20,11 @@ h1 {
 	margin-top: 10vh;
 	font-size: 5vh;
 	color: #00ff00;
+}
+
+h2 {
+	margin-top: -3vh;
+	margin-left: 70vh;
+	font-size: 4vh;
+	color: #008800;
 }

@@ -1,11 +1,11 @@
 body {
-    background-image: url(../../../images/backgrounds/Sicherheitsraum2.png);
+    background-image: url(../../../images/backgrounds/Sicherheitsraum-1.png);
     min-height: 100vh;
 }
 
-#text p {
+.text p {
     font-size: 3vh;
-    margin-top: 75vh;
+    margin-top: 73vh;
     margin-right: 30vh;
     color: #00ff00;
 }
@@ -27,7 +27,7 @@ button {
     margin-right: 30vh;
 }
 
-#button2 {
+#button1 {
     padding-left: 70px;
     padding-right: 70px;
 }

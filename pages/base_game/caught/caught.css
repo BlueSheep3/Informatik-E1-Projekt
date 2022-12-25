@@ -1,0 +1,39 @@
+body {
+    background-image: url(../../../images/backgrounds/caught.png);
+    min-height: 100vh;
+}
+
+h1 {
+    color: #00ff00;
+}
+
+p {
+    color: #00ff00;
+}
+
+#text {
+    margin-top: 24vh;
+    margin-right: 57vh;
+}
+
+#button {
+    margin-right: 57vh;
+}
+
+button {
+    font-size: 3vh;
+	margin-left: 4vh;
+	margin-right: 4vh;
+	transition: .15s;
+	background-color: black;
+	color: #00ff00;
+	border-width: 0.3vh;
+	border-color: #00ff00;
+	padding: 1.5vh;
+	border-radius: 3vh;
+}
+
+#button1 {
+    padding-left: 4vh;
+    padding-right: 4vh;
+}

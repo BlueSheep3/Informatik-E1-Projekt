@@ -1,0 +1,20 @@
+h1 {
+	font-size: 20vh;
+	margin: -5vh 0 0 0;
+	color: #00ff00;
+}
+
+p {
+	margin: 10vh 0;
+	color: #00ff00;
+}
+
+button {
+	font-size: 5vh;
+	background-color: black;
+	color: #00ff00;
+	border-width: 0.3vh;
+	border-color: #00ff00;
+	padding: 1.5vh;
+	border-radius: 3vh;
+}

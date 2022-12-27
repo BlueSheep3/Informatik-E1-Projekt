@@ -1,3 +1,7 @@
+body {
+	background-image: url("../../images/backgrounds/numpad.png");
+}
+
 #main {
 	margin: auto;
 	margin-top: 17.5vh;

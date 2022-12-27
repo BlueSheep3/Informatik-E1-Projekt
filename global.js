@@ -8,9 +8,13 @@ let urlData;
 	let opt = urlParams.get("o");
 	let act = urlParams.get("a");
 
+	let itemDOI = parseInt((data ?? "0")[0]); // 0: no item, 1: has it, 2: has fake
+
 	urlData = {
 		seed: seed,
-		data: {},
+		data: {
+			itemDOI: itemDOI
+		},
 		opt: {},
 		act: {}
 	};
@@ -19,9 +23,15 @@ let urlData;
 let hasUsedGoto = false;
 function gotoUrl(url, actions) {
 	if(hasUsedGoto) return;
-	let params = `?s=${urlData.seed}&d=&o=&a=${actions}`;
+	let params = `?s=${urlData.seed}&d=${urlData.data.itemDOI}&o=&a=${actions}`;
 	window.location.href = url + ".html" + params;
 	hasUsedGoto = true;
+}
+
+function gotoStart() {
+	urlData.seed = 0;
+	urlData.data = { itemDOI: 0 };
+	gotoUrl("../../index", "");
 }
 
 // why doesnt javascript have a seeded rng function?

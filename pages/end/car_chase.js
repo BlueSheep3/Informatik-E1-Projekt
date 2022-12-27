@@ -15,6 +15,13 @@ function frame2() {
 	document.getElementById("distanceMeter").textContent = "Distance To Goal: " + distance + "m";
 	distance -= 1;
 
+	if(distance <= 0) {
+		if(urlData.data.itemDOI == 1)
+			gotoUrl("./end", "");
+		else
+			gotoUrl("./end_fake", "")
+	}
+
 	triggers = [];
 	invincibilityTimer++;
 

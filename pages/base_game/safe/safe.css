@@ -1,0 +1,29 @@
+body {
+	background-image: url("../../../images/backgrounds/safe_closed.png");
+}
+
+img#doi {
+	animation: upDown 2s alternate infinite ease-in-out;
+	height: 30vh;
+	margin-top: 10vh;
+	margin-left: 15vh;
+	cursor: pointer;
+}
+
+img#doi.remove {
+	animation: remove 1s;
+}
+
+@keyframes upDown {
+	to { transform: translatey(5vh); }
+}
+
+@keyframes remove {
+	to {
+		filter: opacity(0%);
+	}
+}
+
+.hidden {
+	display: none !important;
+}

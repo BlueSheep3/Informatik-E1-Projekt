@@ -3,20 +3,18 @@ let urlData;
 {
 	const urlParams = new URLSearchParams(window.location.search);
 
-	let seed = parseInt(urlParams.get("s") ?? "0");
-	let data = urlParams.get("d");
-	let opt = urlParams.get("o");
-	let act = urlParams.get("a");
+	let data = urlParams.get("d") ?? "0";
+	// let opt = urlParams.get("o");
 
-	let itemDOI = parseInt((data ?? "0")[0]); // 0: no item, 1: has it, 2: has fake
+	let itemDOI = parseInt(data[0]); // 0: no item, 1: has it, 2: has fake
 
 	urlData = {
-		seed: seed,
+		seed: parseInt(urlParams.get("s") ?? "0"),
 		data: {
 			itemDOI: itemDOI
 		},
 		opt: {},
-		act: {}
+		act: urlParams.get("a") ?? ""
 	};
 }
 
@@ -84,7 +82,7 @@ function setAchiev(achievName, achievIcon, achievDesc) {
 
 	document.getElementsByTagName("body")[0].append(div);
 
-	setTimeout(() => div.classList.add("anim"), 1);
+	setTimeout(() => div.classList.add("anim"), 50);
 	setTimeout(() => div.classList.remove("anim"), 3000);
 	setTimeout(() => div.remove(), 4000);
 }

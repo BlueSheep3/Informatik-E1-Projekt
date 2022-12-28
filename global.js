@@ -28,10 +28,10 @@ function gotoUrl(url, actions) {
 	hasUsedGoto = true;
 }
 
-function gotoStart() {
+function gotoStart(startUrl) {
 	urlData.seed = 0;
 	urlData.data = { itemDOI: 0 };
-	gotoUrl("../../index", "");
+	gotoUrl(startUrl, "");
 }
 
 // why doesnt javascript have a seeded rng function?

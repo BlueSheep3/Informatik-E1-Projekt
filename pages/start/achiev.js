@@ -6,7 +6,7 @@ let achievList = [
 	},
 	{
 		name: "Master Thief",
-		icon: "../../images/soul.png",
+		icon: "../../images/decleration_of_independence.png",
 		desc: "Steal the Decleration of Independance"
 	},
 	{

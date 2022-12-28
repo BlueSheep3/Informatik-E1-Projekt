@@ -4,7 +4,7 @@
 
 go to https://bluesheep3.github.io/Informatik-E1-Projekt/
 
-## Download yourself
+## Or Download it yourself
 
 - click on `Code`
 - then on `Download ZIP`

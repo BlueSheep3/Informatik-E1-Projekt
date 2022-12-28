@@ -22,3 +22,7 @@ function onClickConfirm() {
 		}, 500);
 	}
 }
+
+window.onload = function() {
+	document.getElementById("codenote").textContent = randomInt(urlData.seed, 4386, 10000);
+}

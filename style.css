@@ -34,6 +34,41 @@ div#center {
 	width: 100%;
 }
 
+div.achiev {
+	position: absolute;
+	top: 100vh;
+	left: 100vw;
+	transform: translate(-100%, 0%);
+	width: 27vh;
+	height: 10vh;
+	background-color: #181818;
+	transition: .5s;
+}
+
+div.achiev.anim {
+	transform: translate(-100%, -100%);
+}
+
+div.achiev img {
+	margin: 1vh;
+	height: 8vh;
+}
+
+div.achiev table {
+	height: 100%;
+	width: 100%;
+}
+
+div.achiev p#title {
+	margin-top: 0;
+	font-size: 1.2vh;
+}
+
+div.achiev p#desc {
+	font-size: 1.1vh;
+	color: #999999;
+}
+
 img.mirrorX {
 	transform: scaleX(-1);
 }

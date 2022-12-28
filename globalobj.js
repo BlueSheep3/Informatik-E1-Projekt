@@ -5,6 +5,8 @@ let onGround = false;
 let walls = [];
 let triggers = [];
 let canTurnAround = true;
+let speed = 0.65;
+let friction = 0.65;
 
 document.onkeydown = function(e) {
 	let c = e.key.toLowerCase();
@@ -35,11 +37,11 @@ function frame() {
 	if(canTurnAround && inputVec.x != 0)
 		setHasClass(chara, "mirrorX", inputVec.x < 0);
 
-	velocity.x += inputVec.x * 0.65;
-	velocity.y += inputVec.y * 0.65;
-	velocity.x *= 0.65;
+	velocity.x += inputVec.x * speed;
+	velocity.y += inputVec.y * speed;
+	velocity.x *= friction;
 	if(hasGravity) velocity.y += 0.5;
-	else velocity.y *= 0.65;
+	else velocity.y *= friction;
 
 	onGround = false;
 	let pos = getObjIdPos("chara");

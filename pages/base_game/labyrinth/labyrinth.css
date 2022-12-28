@@ -1,0 +1,8 @@
+body {
+	background-image: url("../../../images/backgrounds/labyrinth.png");
+}
+
+#chara {
+	height: 6vh;
+	translate: 0% -50%;
+}

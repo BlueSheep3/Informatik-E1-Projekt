@@ -24,6 +24,7 @@ function gotoUrl(url, actions) {
 	let params = `?s=${urlData.seed}&d=${urlData.data.itemDOI}&o=&a=${actions}`;
 	window.location.href = url + ".html" + params;
 	hasUsedGoto = true;
+	setTimeout(() => hasUsedGoto = false, 1000);
 }
 
 function gotoStart(startUrl) {

@@ -12,5 +12,37 @@
 	<div id="center">
 		<img id="doi" class="hidden" onclick="clickDOI()" src="../../../images/decleration_of_independence.png">
 	</div>
+	<div id="mainnumpad" class="hidden">
+		<div id="codediv">
+			<p id="code"></p>
+		</div>
+		<table id="numpad">
+			<tr>
+				<td class="num" onclick="onClick(1)">1</td>
+				<td class="num" onclick="onClick(2)">2</td>
+				<td class="num" onclick="onClick(3)">3</td>
+			</tr>
+			<tr>
+				<td class="num" onclick="onClick(4)">4</td>
+				<td class="num" onclick="onClick(5)">5</td>
+				<td class="num" onclick="onClick(6)">6</td>
+			</tr>
+			<tr>
+				<td class="num" onclick="onClick(7)">7</td>
+				<td class="num" onclick="onClick(8)">8</td>
+				<td class="num" onclick="onClick(9)">9</td>
+			</tr>
+			<tr>
+				<td class="num" id="deleteButton" onclick="onClickDelete()">X</td>
+				<td class="num" onclick="onClick(0)">0</td>
+				<td class="num" id="confirmButton" onclick="onClickConfirm()">V</td>
+			</tr>
+		</table>
+	</div>
+	<div id="codehelp" class="hidden">
+		<p>Dont know the code?</p>
+		<button onclick="gotoUrl('../../../index', '')">Try Again from the Start</button>
+		<p>maybe you'll find more Info</p>
+	</div>
 </body>
 </html>

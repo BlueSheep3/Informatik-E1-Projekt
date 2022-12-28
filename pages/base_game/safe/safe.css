@@ -27,3 +27,55 @@ img#doi.remove {
 .hidden {
 	display: none !important;
 }
+
+div#codehelp {
+	margin-top: -5vh;
+	margin-left: -85vh;
+}
+
+div#codehelp * {
+	font-size: 2vh;
+	margin: 0.5vh;
+}
+
+
+#mainnumpad {
+	margin: auto;
+	margin-top: 30vh;
+	translate: (50vh, 0vh);
+	width: 52.5vh;
+	height: 60.5vh;
+}
+
+#codediv {
+	margin-left: 15vh;
+	background-color: #104010;
+	width: 37.5vh;
+	height: 12.5vh;
+}
+
+p#code {
+	font-size: 10vh;
+	color: #20a020;
+}
+
+#numpad {
+	margin-left: 15vh;
+	width: 37.5vh;
+	height: 50vh;
+}
+
+.num {
+	font-size: 10vh;
+	width: 33.333%;
+	background-color: #202020;
+}
+
+.num:hover { background-color: #282828; }
+.num:active { background-color: #383838; }
+.num#deleteButton { background-color: #401010; }
+.num#deleteButton:hover { background-color: #481818; }
+.num#deleteButton:active { background-color: #582020; }
+.num#confirmButton { background-color: #104010; }
+.num#confirmButton:hover { background-color: #184818; }
+.num#confirmButton:active { background-color: #205820; }

@@ -72,6 +72,9 @@ function checkCollision(pos, prevPos) {
 		let trig = triggers[i];
 		if(pos.x >= trig[0] && pos.x <= trig[2] && pos.y >= trig[1] && pos.y <= trig[3]) {
 			if(typeof onTrigger !== "undefined") onTrigger(i);
+			if(prevPos.x < trig[0] || prevPos.x > trig[2] || prevPos.y < trig[1] || prevPos.y > trig[3]) {
+				if(typeof onTriggerEnter !== "undefined") onTriggerEnter(i);
+			}
 		}
 	}
 }

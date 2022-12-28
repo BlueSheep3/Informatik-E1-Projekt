@@ -11,15 +11,19 @@ window.onload = function() {
 	setTimeout(policeShoot, 3000);
 }
 
+let hasUsedGoto = false;
 function frame2() {
 	document.getElementById("distanceMeter").textContent = "Distance To Goal: " + distance + "m";
 	distance -= 1;
 
 	if(distance <= 0) {
-		if(urlData.data.itemDOI == 1)
-			gotoUrl("./end/end", "");
-		else
-			gotoUrl("./fake/fake", "")
+		if(hasUsedGoto) {
+			if(urlData.data.itemDOI == 1)
+				gotoUrl("./end/end", "");
+			else
+				gotoUrl("./fake/fake", "");
+		}
+		hasUsedGoto = true;
 	}
 
 	triggers = [];

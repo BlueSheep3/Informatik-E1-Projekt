@@ -18,13 +18,9 @@ let urlData;
 	};
 }
 
-let hasUsedGoto = false;
 function gotoUrl(url, actions) {
-	if(hasUsedGoto) return;
 	let params = `?s=${urlData.seed}&d=${urlData.data.itemDOI}&o=&a=${actions}`;
 	window.location.href = url + ".html" + params;
-	hasUsedGoto = true;
-	setTimeout(() => hasUsedGoto = false, 1000);
 }
 
 function gotoStart(startUrl) {

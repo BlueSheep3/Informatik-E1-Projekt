@@ -13,13 +13,6 @@ button {
 	border-radius: 3vh;
 }
 
-button#deletesavedata {
-	margin-top: 10vh;
-	margin-bottom: 5vh;
-	color: #ff0000;
-	border-color: #ff0000;
-}
-
 div#achievlist {
 	margin: auto;
 	width: 70vh;

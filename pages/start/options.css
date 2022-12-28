@@ -9,3 +9,8 @@ button {
 	border-radius: 3vh;
 	margin: 5vh;
 }
+
+button#deletesavedata {
+	color: #ff0000;
+	border-color: #ff0000;
+}

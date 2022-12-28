@@ -77,4 +77,5 @@ function deleteSavedata() {
 	localStorage.clear();
 	button.textContent = "DELETE SAVEDATA";
 	tryDelete = false;
+	location.reload();
 }

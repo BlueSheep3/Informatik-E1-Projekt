@@ -15,5 +15,5 @@ function clickDOI() {
 	setTimeout(() => doi.remove(), 1000);
 	setAchiev("Master Thief", "../../../images/decleration_of_independence.png", "Steal the Decleration of Independance");
 
-	setTimeout(() => gotoUrl('../../end/decleration_of_independence/decleration', ''), 2000);
+	setTimeout(() => gotoUrl('../../end/decleration_of_independence/decleration', ''), 5000);
 }

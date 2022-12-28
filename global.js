@@ -52,8 +52,8 @@ function setHasClass(obj, className, condition) {
 }
 
 function setAchiev(achievName, achievIcon, achievDesc) {
-	// if(localStorage.getItem("achiev: " + achievName) != null) return;
-	// localStorage.setItem("achiev: " + achievName, "got");
+	if(localStorage.getItem("achiev: " + achievName) != null) return;
+	localStorage.setItem("achiev: " + achievName, "got");
 
 	let div = document.createElement("div");
 	div.classList.add("achiev");

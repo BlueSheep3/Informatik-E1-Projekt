@@ -14,7 +14,7 @@ function onClickConfirm() {
 	let code = document.getElementById("code");
 	let correctCode = randomInt(urlData.seed, 4386, 10000);
 	if(code.textContent == correctCode) {
-		gotoUrl("../testing/testing.html", "");
+		gotoUrl("./scene_1/scene1", "");
 	} else {
 		code.style = "color: #b02020";
 		setTimeout(() => {

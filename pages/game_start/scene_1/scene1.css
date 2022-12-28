@@ -5,7 +5,6 @@ body {
 
 .text p {
     padding-top: 15vh;
-    color: #00ff00;
     font-size: 3vh;
 }
 
@@ -15,9 +14,7 @@ button {
 	margin-right: 6vh;
 	transition: .15s;
 	background-color: black;
-	color: #00ff00;
 	border-width: 0.3vh;
-	border-color: #00ff00;
 	padding: 1.5vh;
 	border-radius: 3vh;
 }

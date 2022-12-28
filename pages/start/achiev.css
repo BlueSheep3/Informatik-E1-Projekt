@@ -1,0 +1,76 @@
+body {
+	overflow: initial;
+}
+
+button {
+	font-size: 7vh;
+	margin-top: 4vh;
+	background-color: black;
+	color: #00ff00;
+	border-width: 0.3vh;
+	border-color: #00ff00;
+	padding: 1vh;
+	border-radius: 3vh;
+}
+
+button#deletesavedata {
+	margin-top: 10vh;
+	margin-bottom: 5vh;
+	color: #ff0000;
+	border-color: #ff0000;
+}
+
+div#achievlist {
+	margin: auto;
+	width: 70vh;
+}
+
+div.achievobj {
+	width: 70vh;
+	height: 30vh;
+	border: 1vh solid #181818;
+}
+
+div.achievobj.hasachiev {
+	border: 1vh solid #dddd22;
+}
+
+div.achievobj img {
+	margin: 3vh 0vh;
+	height: 20vh;
+	width: 20vh;
+	filter: brightness(25%);
+}
+
+div.achievobj.hasachiev img {
+	filter: brightness(100%);
+}
+
+div.achievobj table {
+	height: 100%;
+	width: 100%;
+}
+
+div.achievobj td#icontd {
+	height: 25vh;
+	width: 25vh;
+}
+
+div.achievobj p#title {
+	margin-top: 0;
+	font-size: 3.5vh;
+	color: #999999;
+}
+
+div.achievobj.hasachiev p#title {
+	color: white;
+}
+
+div.achievobj p#desc {
+	font-size: 3vh;
+	color: #444444;
+}
+
+div.achievobj.hasachiev p#desc {
+	color: #999999;
+}

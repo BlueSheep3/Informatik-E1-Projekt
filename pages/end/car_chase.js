@@ -17,9 +17,9 @@ function frame2() {
 
 	if(distance <= 0) {
 		if(urlData.data.itemDOI == 1)
-			gotoUrl("./end", "");
+			gotoUrl("./end/end", "");
 		else
-			gotoUrl("./end_fake", "")
+			gotoUrl("./fake/fake", "")
 	}
 
 	triggers = [];

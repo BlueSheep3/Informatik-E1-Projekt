@@ -27,7 +27,7 @@
           event.preventDefault();
           let value = document.getElementById("value").value.trim().toLowerCase();
           if (value == "9" || value == "nine") {
-            this.submit(window.location.href = "../../Sicher/sicher.html");
+            gotoUrl("../../Sicher/sicher", "q");
           } else {
             window.location.href = "../wrong/wrong.html";
           }

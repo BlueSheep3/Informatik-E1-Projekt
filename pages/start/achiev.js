@@ -1,8 +1,13 @@
 let achievList = [
 	{
 		name: "No Thank You",
-		icon: "../../images/soul.png",
+		icon: "../../images/achiev_decline.png",
 		desc: "Decline the Mission"
+	},
+	{
+		name: "Quiz Extraordinaire",
+		icon: "../../images/achiev_quiz.png",
+		desc: "Get all 5 Questions in the Quiz correct"
 	},
 	{
 		name: "Master Thief",
@@ -11,7 +16,7 @@ let achievList = [
 	},
 	{
 		name: "Completionist",
-		icon: "../../images/soul.png",
+		icon: "../../images/achiev_all_endings.png",
 		desc: "Get all Endings"
 	}
 ]

@@ -7,11 +7,17 @@
     <link rel="stylesheet" href="../../../style.css">
     <link rel="stylesheet" href="./sicher.css">
     <script src="../../../global.js"></script>
+	<script>
+		window.onload = () => {
+			if(urlData.act !== "q") return;
+			setAchiev("Quiz Extraordinaire", "../../../images/achiev_quiz.png", "Get all 5 Questions in the Quiz correct");
+		}
+	</script>
     <title>Safe Area</title>
 </head>
 <body>
     <h1>Sure you want to do this?</h1>
-    <p>It isn't to late to return yet! This is a <br>
+    <p id="text">It isn't to late to return yet! This is a <br>
     dangerous task, and we would understand if you don't <br>
     want to do this. But if you do want to continue then <br>
     it is time to rumble!

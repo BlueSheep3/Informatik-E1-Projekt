@@ -27,9 +27,9 @@
           event.preventDefault();
           let value = document.getElementById("value").value.trim().toLowerCase();
           if (value == "12" || value == "twelve") {
-            this.submit(window.location.href = "../Frage2/Frage2.html");
+            gotoUrl("../Frage2/Frage2", "");
           } else {
-            window.location.href = "../wrong/wrong.html";
+            gotoUrl("../wrong/wrong", "");
           }
         }
       </script>

@@ -26,9 +26,9 @@
           event.preventDefault();
           let value = document.getElementById("value").value.trim().toLowerCase();
           if (value == "glucose") {
-            this.submit(window.location.href = "../Frage5/Frage5.html");
+            gotoUrl("../Frage5/Frage5", "");
           } else {
-            window.location.href = "../wrong/wrong.html";
+            gotoUrl("../wrong/wrong", "");
           }
         }
       </script>

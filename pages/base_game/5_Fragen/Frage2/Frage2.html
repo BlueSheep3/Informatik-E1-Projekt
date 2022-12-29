@@ -26,9 +26,9 @@
           event.preventDefault();
           let value = document.getElementById("value").value.trim().toLowerCase();
           if (value == "30" || value == "thirty") {
-            this.submit(window.location.href = "../Frage3/Frage3.html");
+            gotoUrl("../Frage3/Frage3", "");
           } else {
-            window.location.href = "../wrong/wrong.html";
+            gotoUrl("../wrong/wrong", "");
           }
         }
       </script>

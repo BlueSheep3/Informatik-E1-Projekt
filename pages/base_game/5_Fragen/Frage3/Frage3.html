@@ -26,9 +26,9 @@
           event.preventDefault();
           let value = document.getElementById("value").value.trim().toLowerCase();
           if (value == "stomach" || value == "the stomach") {
-            this.submit(window.location.href = "../Frage4/Frage4.html");
+            gotoUrl("../Frage4/Frage4", "");
           } else {
-            window.location.href = "../wrong/wrong.html";
+            gotoUrl("../wrong/wrong", "");
           }
         }
       </script>

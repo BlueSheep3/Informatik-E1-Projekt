@@ -52,6 +52,15 @@ function setAchiev(achievName, achievIcon, achievDesc) {
 	// if(localStorage.getItem("achiev: " + achievName) != null) return;
 	localStorage.setItem("achiev: " + achievName, "got");
 
+	setAchievRecurse(achievName, achievIcon, achievDesc);
+}
+
+function setAchievRecurse(achievName, achievIcon, achievDesc) {
+	if(document.getElementsByClassName("achiev").length > 0) {
+		setTimeout(() => setAchievRecurse(achievName, achievIcon, achievDesc), 3800);
+		return;
+	}
+
 	let div = document.createElement("div");
 	div.classList.add("achiev");
 
@@ -81,7 +90,7 @@ function setAchiev(achievName, achievIcon, achievDesc) {
 
 	setTimeout(() => div.classList.add("anim"), 50);
 	setTimeout(() => div.classList.remove("anim"), 3000);
-	setTimeout(() => div.remove(), 4000);
+	setTimeout(() => div.remove(), 3600);
 }
 
 function setEnding(endingId) {

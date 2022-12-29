@@ -18,7 +18,7 @@ function openSafe() {
 	document.getElementById("confirmcode").classList.add("hidden");
 
 	new Howl({
-		src: ["../../../music/the_holy.mp3"],
+		src: ["../../../other assets/the_holy.mp3"],
 		volume: 0.5,
 		loop: true
 	}).play();

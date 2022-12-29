@@ -11,6 +11,7 @@ input {
     color: white;
     background-color: black;
     border: 0;
+	width: 30vh;
 }
 
 #submit {

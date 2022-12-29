@@ -12,21 +12,20 @@
 <body>
     <div id="text">
         <h1>Question 3:</h1>
-        <p>What growls, but doesn't bite? <br>
-        Awnser in lowercase. </p>
+        <p>What growls, but doesn't bite?</p>
     </div>
 </body>
 <footer>
     <form id="form" action="./Frage1.html" method="post">
-        <input type="text" id="value" name="value" placeholder="(the) awnser"><br>
-        <input type="submit" id="submit" value="Absenden">
+        <input type="text" id="value" name="value" placeholder="Answer here"><br>
+        <input type="submit" id="submit" value="Confirm">
       </form> 
       
       <script>
         document.getElementById("form").onsubmit = function(event) {
           event.preventDefault();
-          let value = document.getElementById("value").value;
-          if (value == "the stomach") {
+          let value = document.getElementById("value").value.trim().toLowerCase();
+          if (value == "stomach" || value == "the stomach") {
             this.submit(window.location.href = "../Frage4/Frage4.html");
           } else {
             window.location.href = "../wrong/wrong.html";

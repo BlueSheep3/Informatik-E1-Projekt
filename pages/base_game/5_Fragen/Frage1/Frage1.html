@@ -12,22 +12,21 @@
 <body>
     <div id="text">
         <h1>Question 1:</h1>
-        <p>Many months have 30, many 31 days. <br>
-        How many have 28 days? <br>
-        (Awnser in a Number)</p>
+        <p>Many months have 30 or 31 days. <br>
+        How many have 28 days?</p>
     </div>
 </body>
 <footer>
     <form id="form" action="./Frage1.html" method="post">
-        <input type="text" id="value" name="value" placeholder="Awnser here"><br>
-        <input type="submit" id="submit" value="Absenden">
-      </form> 
+        <input type="text" id="value" name="value" placeholder="Answer here">months<br>
+        <input type="submit" id="submit" value="Confirm">
+	</form>
       
       <script>
         document.getElementById("form").onsubmit = function(event) {
           event.preventDefault();
-          let value = document.getElementById("value").value;
-          if (value == "12") {
+          let value = document.getElementById("value").value.trim().toLowerCase();
+          if (value == "12" || value == "twelve") {
             this.submit(window.location.href = "../Frage2/Frage2.html");
           } else {
             window.location.href = "../wrong/wrong.html";

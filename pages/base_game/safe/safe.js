@@ -1,7 +1,8 @@
 window.onload = function() {
 	if(urlData.act === "f") return;
 	document.getElementById("codehelp").classList.remove("hidden");
-	document.getElementById("mainnumpad").classList.remove("hidden");
+	document.getElementById("code").classList.remove("hidden");
+	document.getElementById("confirmcode").classList.remove("hidden");
 }
 
 window.onclick = function() {
@@ -13,7 +14,8 @@ function openSafe() {
 		= "url('../../../images/backgrounds/safe_open.png')";
 	document.getElementById("doi").classList.remove("hidden");
 	document.getElementById("codehelp").classList.add("hidden");
-	document.getElementById("mainnumpad").classList.add("hidden");
+	document.getElementById("code").classList.add("hidden");
+	document.getElementById("confirmcode").classList.add("hidden");
 
 	new Howl({
 		src: ["../../../music/the_holy.mp3"],
@@ -36,29 +38,9 @@ function clickDOI() {
 	setTimeout(() => gotoUrl("../../end/decleration_of_independence/decleration", ''), 5000);
 }
 
-
-function onClick(n) {
-	let code = document.getElementById("code");
-	if(code.textContent.length >= 6) return;
-	code.textContent += n;
-}
-
-function onClickDelete() {
-	let code = document.getElementById("code");
-	if(code.textContent.length == 0) return;
-	code.textContent = code.textContent.substring(0, code.textContent.length - 1);
-}
-
-function onClickConfirm() {
-	let code = document.getElementById("code");
+function confirm() {
 	// let correctCode = randomInt(urlData.seed, 4386, 10000);
-	let correctCode = 69420; // TODO: change correct code
-	if(code.textContent == correctCode) {
-		openSafe();
-	} else {
-		code.style = "color: #b02020";
-		setTimeout(() => {
-			code.style = "";
-		}, 500);
-	}
+	let input = document.getElementById("code");
+	if(input.value.trim().toLowerCase() !== "somecode") return;
+	openSafe();
 }

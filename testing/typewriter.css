@@ -1,9 +1,0 @@
-#written, #notwritten {
-	font-size: 5vh;
-	white-space: pre-line;
-}
-
-#notwritten {
-	color: black;
-	user-select: none;
-}

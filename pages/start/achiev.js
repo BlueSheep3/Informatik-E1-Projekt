@@ -36,7 +36,7 @@ window.onload = function() {
 		if(hasAchiev) achievCount++;
 	}
 
-	let maxEndings = 8;
+	let maxEndings = 9;
 	let currentEndings = 0;
 	for(let i = 0; i < maxEndings; i++) {
 		if(localStorage.getItem("ending: " + i) != null)

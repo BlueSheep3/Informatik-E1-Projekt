@@ -87,7 +87,7 @@ function setAchiev(achievName, achievIcon, achievDesc) {
 function setEnding(endingId) {
 	localStorage.setItem("ending: " + endingId, "got");
 
-	let maxEndings = 8;
+	let maxEndings = 9;
 	let currentEndings = 0;
 	for(let i = 0; i < maxEndings; i++) {
 		if(localStorage.getItem("ending: " + i) != null)

@@ -15,6 +15,11 @@ let achievList = [
 		desc: "Steal the Decleration of Independance"
 	},
 	{
+		name: "Mission Complete",
+		icon: "../../images/achiev_mission_complete.png",
+		desc: "Complete your Mission and get $1,000,000,000"
+	},
+	{
 		name: "Completionist",
 		icon: "../../images/achiev_all_endings.png",
 		desc: "Get all Endings"

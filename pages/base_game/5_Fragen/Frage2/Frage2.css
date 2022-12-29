@@ -1,0 +1,18 @@
+#text h1 {
+    font-size: 8vh;
+}
+
+#text p {
+    font-size: 5vh;
+    margin-top: 30vh;
+}
+
+input {
+    color: white;
+    background-color: black;
+    border: 0;
+}
+
+#submit {
+    margin-top: 1vh;
+}

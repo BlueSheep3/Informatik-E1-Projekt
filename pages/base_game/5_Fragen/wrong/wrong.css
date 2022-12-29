@@ -1,0 +1,16 @@
+h1 {
+	font-size: 20vh;
+	margin: -5vh 0 0 0;
+}
+
+p#endtext {
+	margin: 10vh 0;
+}
+
+button {
+	font-size: 5vh;
+	background-color: black;
+	border-width: 0.3vh;
+	padding: 1.5vh;
+	border-radius: 3vh;
+}

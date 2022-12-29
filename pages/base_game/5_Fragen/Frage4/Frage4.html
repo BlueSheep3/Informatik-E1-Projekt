@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Frage4.css">
+    <link rel="stylesheet" href="../../../../style.css">
+    <script src="../../../../global.js"></script>
+    <script src="./Frage1.js"></script>
+    <title>Question 4</title>
+</head>
+<body>
+    <div id="text">
+        <h1>Question 4:</h1>
+        <p>What does the chemical formula „C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>“ stand for? <br>
+        Awnser in lowercase.</p>
+    </div>
+</body>
+<footer>
+    <form id="form" action="./Frage1.html" method="post">
+        <input type="text" id="value" name="value" placeholder="Awnser here"><br>
+        <input type="submit" id="submit" value="Absenden">
+      </form> 
+      
+      <script>
+        document.getElementById("form").onsubmit = function(event) {
+          event.preventDefault();
+          let value = document.getElementById("value").value;
+          if (value == "glucose") {
+            this.submit(window.location.href = "../Frage5/Frage5.html");
+          } else {
+            window.location.href = "../wrong/wrong.html";
+          }
+        }
+      </script>
+</footer>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Frage2.css">
+    <link rel="stylesheet" href="../../../../style.css">
+    <script src="../../../../global.js"></script>
+    <title>Question 2</title>
+</head>
+<body>
+    <div id="text">
+        <h1>Question 2:</h1>
+        <p> How long did the 30 year war take?</p>
+    </div>
+</body>
+<footer>
+    <form id="form" action="./Frage1.html" method="post">
+        <input type="text" id="value" name="value" placeholder="(Number) years"><br>
+        <input type="submit" id="submit" value="Absenden">
+      </form> 
+      
+      <script>
+        document.getElementById("form").onsubmit = function(event) {
+          event.preventDefault();
+          let value = document.getElementById("value").value;
+          if (value == "30 years") {
+            this.submit(window.location.href = "../Frage3/Frage3.html");
+          } else {
+            window.location.href = "../wrong/wrong.html";
+          }
+        }
+      </script>
+</footer>
+</html>

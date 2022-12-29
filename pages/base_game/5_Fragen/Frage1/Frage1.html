@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Frage1.css">
+    <link rel="stylesheet" href="../../../../style.css">
+    <script src="../../../../global.js"></script>
+    <title>Question 1</title>
+</head>
+<body>
+    <div id="text">
+        <h1>Question 1:</h1>
+        <p>Many months have 30, many 31 days. <br>
+        How many have 28 days? <br>
+        (Awnser in a Number)</p>
+    </div>
+</body>
+<footer>
+    <form id="form" action="./Frage1.html" method="post">
+        <input type="text" id="value" name="value" placeholder="Awnser here"><br>
+        <input type="submit" id="submit" value="Absenden">
+      </form> 
+      
+      <script>
+        document.getElementById("form").onsubmit = function(event) {
+          event.preventDefault();
+          let value = document.getElementById("value").value;
+          if (value == "12") {
+            this.submit(window.location.href = "../Frage2/Frage2.html");
+          } else {
+            window.location.href = "../wrong/wrong.html";
+          }
+        }
+      </script>
+</footer>
+</html>

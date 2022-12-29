@@ -83,3 +83,16 @@ function setAchiev(achievName, achievIcon, achievDesc) {
 	setTimeout(() => div.classList.remove("anim"), 3000);
 	setTimeout(() => div.remove(), 4000);
 }
+
+function setEnding(endingId) {
+	localStorage.setItem("ending: " + endingId, "got");
+
+	let maxEndings = 8;
+	let currentEndings = 0;
+	for(let i = 0; i < maxEndings; i++) {
+		if(localStorage.getItem("ending: " + i) != null)
+			currentEndings++;
+	}
+	if(currentEndings < maxEndings) return;
+	setAchiev("Completionist", "./images/achiev_all_endings.png", "Get all Endings");
+}

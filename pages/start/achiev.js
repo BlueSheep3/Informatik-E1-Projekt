@@ -30,8 +30,18 @@ window.onload = function() {
 		createAchievObj(achiev, hasAchiev);
 		if(hasAchiev) achievCount++;
 	}
+
+	let maxEndings = 8;
+	let currentEndings = 0;
+	for(let i = 0; i < maxEndings; i++) {
+		if(localStorage.getItem("ending: " + i) != null)
+			currentEndings++;
+	}
+
 	document.getElementById("achievCount").textContent =
 		`${achievCount}/${achievList.length} Achievements Unlocked!`;
+	document.getElementById("endingCount").textContent =
+		`${currentEndings}/${maxEndings} Endings Found!`;
 }
 
 function createAchievObj(achiev, hasAchiev) {

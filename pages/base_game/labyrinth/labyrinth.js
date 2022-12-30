@@ -15,8 +15,8 @@ speed = 0.45;
 
 function onTriggerEnter(trigIndex) {
 	if(trigIndex === 0) {
-		// blue door
+		gotoUrl("../caught/bluedoor", "");
 	} else if(trigIndex === 1) {
-		// red door
+		gotoUrl("../5_Fragen/Introduction/Introduction", "");
 	}
 }

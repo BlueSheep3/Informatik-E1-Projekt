@@ -11,6 +11,10 @@
 		window.onload = () => {
 			setAchiev("Mission Complete", "../../../images/achiev_mission_complete.png", "Complete your Mission and get $1,000,000,000");
 			setEnding(4);
+			let startTime = localStorage.getItem("startTime") ?? 0;
+			let elapsedTime = Math.floor((new Date().getTime() - startTime) / 1000);
+			if(elapsedTime < 150)
+				setAchiev("Speedrunner", "../../../images/achiev_speedrunner.png", "Complete your Mission in under 2.5 Minutes");
 		}
 	</script>
     <title>Mission Complete!</title>
@@ -20,12 +24,13 @@
 		<h1>DONE</h1>
 		<p id="endtext">
 			Congratulations General! You have just successfully stolen <br>
-            the Decleration of Independence out of the CIA Headquarters in <br>
+            the Declaration of Independence out of the CIA Headquarters in <br>
             Langley. We knew you can make it. Once arrviving home you will <br>
             receive the $1,000,000,000! <br>
             <br>
             Enjoy it. You have done what lot's of others have failed to do!
 		</p>
+		<p id="temp"></p>
 		<button onclick="gotoStart('../../../index')">BACK TO START</button>
 	</div>
 </body>

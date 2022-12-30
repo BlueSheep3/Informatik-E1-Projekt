@@ -33,9 +33,9 @@ function clickDOI() {
 	doi.classList.add("remove");
 	urlData.data.itemDOI = urlData.act === "f" ? 2 : 1;
 	setTimeout(() => doi.remove(), 1000);
-	setAchiev("Master Thief", "../../../images/decleration_of_independence.png", "Steal the Decleration of Independance");
+	setAchiev("Master Thief", "../../../images/declaration_of_independence.png", "Steal the declaration of independence");
 
-	setTimeout(() => gotoUrl("../../end/decleration_of_independence/decleration", ''), 5000);
+	setTimeout(() => gotoUrl("../../end/declaration_of_independence/declaration", ''), 5000);
 }
 
 function confirm() {

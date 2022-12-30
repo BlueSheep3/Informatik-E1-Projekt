@@ -11,13 +11,18 @@ let achievList = [
 	},
 	{
 		name: "Master Thief",
-		icon: "../../images/decleration_of_independence.png",
-		desc: "Steal the Decleration of Independance"
+		icon: "../../images/declaration_of_independence.png",
+		desc: "Steal the Declaration of Independence"
 	},
 	{
 		name: "Mission Complete",
 		icon: "../../images/achiev_mission_complete.png",
 		desc: "Complete your Mission and get $1,000,000,000"
+	},
+	{
+		name: "Speedrunner",
+		icon: "../../images/achiev_speedrunner.png",
+		desc: "Complete your Mission in under 2.5 Minutes"
 	},
 	{
 		name: "Completionist",

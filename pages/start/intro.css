@@ -1,6 +1,5 @@
 #text {
-	padding-top: 6vh;
-	padding-bottom: 6vh;
+	margin-bottom: 8vh;
 }
 
 #task {
@@ -14,9 +13,16 @@ span {
 }
 
 p#pressbuttonhint {
-	color: #006600;
-	margin-top: 10vh;
+	margin-bottom: -10vh;
 	font-size: 3.5vh;
+}
+
+p#pressbuttonhint:not(.hidden) {
+	color: #006600;
+}
+
+p {
+	margin-bottom: 5vh;
 }
 
 button {
@@ -49,6 +55,14 @@ button#buttonDecline.swapped {
 	user-select: none;
 }
 
-.hidden {
+p.hidden {
+	color: transparent;
+}
+
+div.hidden {
+	height: 9.5vh;
+}
+
+div.hidden button {
 	display: none !important;
 }

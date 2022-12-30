@@ -28,3 +28,12 @@ button {
     padding-left: 70px;
     padding-right: 70px;
 }
+
+div#computer {
+	cursor: pointer;
+	position: absolute;
+	width: 21vh;
+	height: 15vh;
+	left: 30vh;
+	top: 25vh;
+}

@@ -10,7 +10,7 @@
 	<script>
 		window.onload = () => {
 			setAchiev("Mission Complete", "../../../images/achiev_mission_complete.png", "Complete your Mission and get $1,000,000,000");
-			setEnding(4);
+			setEnding(4, "../../../");
 			let startTime = localStorage.getItem("startTime") ?? 0;
 			let elapsedTime = Math.floor((new Date().getTime() - startTime) / 1000);
 			if(elapsedTime < 150)

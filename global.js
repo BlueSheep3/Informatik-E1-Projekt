@@ -49,7 +49,7 @@ function setHasClass(obj, className, condition) {
 }
 
 function setAchiev(achievName, achievIcon, achievDesc) {
-	// if(localStorage.getItem("achiev: " + achievName) != null) return;
+	if(localStorage.getItem("achiev: " + achievName) != null) return;
 	localStorage.setItem("achiev: " + achievName, "got");
 
 	setAchievRecurse(achievName, achievIcon, achievDesc);
@@ -93,7 +93,9 @@ function setAchievRecurse(achievName, achievIcon, achievDesc) {
 	setTimeout(() => div.remove(), 3600);
 }
 
-function setEnding(endingId) {
+// a path from root would work when playing the github version
+// but it wouldnt work for the downloaded version
+function setEnding(endingId, relImg) {
 	localStorage.setItem("ending: " + endingId, "got");
 
 	let maxEndings = 9;
@@ -103,5 +105,5 @@ function setEnding(endingId) {
 			currentEndings++;
 	}
 	if(currentEndings < maxEndings) return;
-	setAchiev("Completionist", "./images/achiev_all_endings.png", "Get all Endings");
+	setAchiev("Completionist", relImg + "images/achiev_all_endings.png", "Get all Endings");
 }

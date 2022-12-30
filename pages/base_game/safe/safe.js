@@ -39,7 +39,14 @@ function clickDOI() {
 }
 
 function confirm() {
-	// let correctCode = randomInt(urlData.seed, 4386, 10000);
+	let passwords = [
+		"declerationofindependence",
+		"",
+		""
+	];
+	let rng = randomInt(urlData.seed, 8645, 3);
+	let rngNum = (randomInt(urlData.seed, 4386, 10000) + "")[0];
+	let correctCode = passwords[rng] + rngNum;
 	let input = document.getElementById("code");
 	if(input.value.trim().toLowerCase() !== "somecode") return;
 	openSafe();

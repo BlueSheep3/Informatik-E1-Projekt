@@ -20,6 +20,11 @@ let achievList = [
 		desc: "Complete your Mission and get $1,000,000,000"
 	},
 	{
+		name: "Speedrunner",
+		icon: "../../images/achiev_speedrunner.png",
+		desc: "Complete your Mission in under 2.5 Minutes"
+	},
+	{
 		name: "Completionist",
 		icon: "../../images/achiev_all_endings.png",
 		desc: "Get all Endings"

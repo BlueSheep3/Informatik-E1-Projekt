@@ -11,6 +11,10 @@
 		window.onload = () => {
 			setAchiev("Mission Complete", "../../../images/achiev_mission_complete.png", "Complete your Mission and get $1,000,000,000");
 			setEnding(4);
+			let startTime = localStorage.getItem("startTime") ?? 0;
+			let elapsedTime = Math.floor((new Date().getTime() - startTime) / 1000);
+			if(elapsedTime < 150)
+				setAchiev("Speedrunner", "../../../images/achiev_speedrunner.png", "Complete your Mission in under 2.5 Minutes");
 		}
 	</script>
     <title>Mission Complete!</title>
@@ -26,6 +30,7 @@
             <br>
             Enjoy it. You have done what lot's of others have failed to do!
 		</p>
+		<p id="temp"></p>
 		<button onclick="gotoStart('../../../index')">BACK TO START</button>
 	</div>
 </body>

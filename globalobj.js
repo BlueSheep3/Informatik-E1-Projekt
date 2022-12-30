@@ -27,11 +27,21 @@ function frame() {
 
 	let inputVec = { x: 0, y: 0 };
 
-	if(input.a) inputVec.x--;
-	if(input.d) inputVec.x++;
-	if(!hasGravity) {
-		if(input.w) inputVec.y--;
-		if(input.s) inputVec.y++;
+	if(isTouching) {
+		let difX = touchPos.x - getObjIdPos("chara").x;
+		let difY = touchPos.y - getObjIdPos("chara").y;
+		let mag = Math.sqrt(difX ** 2 + difY ** 2);
+		if(mag != 0) {
+			inputVec.x = difX / mag;
+			if(!hasGravity) inputVec.y = difY / mag;
+		}
+	} else {
+		if(input.a) inputVec.x--;
+		if(input.d) inputVec.x++;
+		if(!hasGravity) {
+			if(input.w) inputVec.y--;
+			if(input.s) inputVec.y++;
+		}
 	}
 
 	if(canTurnAround && inputVec.x != 0)
@@ -73,7 +83,7 @@ function checkCollision(pos, prevPos) {
 	for(let i = 0; i < triggers.length; i++) {
 		let trig = triggers[i];
 		if(pos.x >= trig[0] && pos.x <= trig[2] && pos.y >= trig[1] && pos.y <= trig[3]) {
-			if(typeof onTrigger !== "undefined") onTrigger(i);
+			// if(typeof onTrigger !== "undefined") onTrigger(i); // unused
 			if(prevPos.x < trig[0] || prevPos.x > trig[2] || prevPos.y < trig[1] || prevPos.y > trig[3]) {
 				if(typeof onTriggerEnter !== "undefined") onTriggerEnter(i);
 			}
@@ -113,4 +123,42 @@ function spawnObj(objId, className, pos, sprite) {
 	div.appendChild(obj);
 	document.getElementsByTagName("body").item(0).prepend(div);
 	return obj;
+}
+
+// mobile input handling
+let isTouching = false;
+let touchPos = {x: 0, y: 0};
+
+document.addEventListener('touchstart', function(event) {
+	isTouching = true;
+	updateTouchPos(event);
+});
+
+document.addEventListener('touchend', function(event) {
+	isTouching = false;
+	updateTouchPos(event);
+});
+
+document.addEventListener('touchmove', function(event) {
+	updateTouchPos(event);
+});
+
+function updateTouchPos(event) {
+	let sumX = 0;
+	let sumY = 0;
+	let numTouches = event.touches.length;
+
+	for(let i = 0; i < numTouches; i++) {
+		sumX += event.touches[i].clientX;
+		sumY += event.touches[i].clientY;
+	}
+
+	let viewWidth = document.documentElement.clientWidth;
+	let viewHeight = document.documentElement.clientHeight;
+	let ratio = viewWidth / viewHeight;
+
+	touchPos = {
+		x: 100 * ratio * ((sumX / numTouches) - viewWidth / 2) / viewHeight,
+		y: 100 * (sumY / numTouches) / viewHeight
+	};
 }

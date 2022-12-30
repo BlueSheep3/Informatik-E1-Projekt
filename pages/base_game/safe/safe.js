@@ -41,8 +41,8 @@ function clickDOI() {
 function confirm() {
 	let passwords = [
 		"declerationofindependence",
-		"",
-		""
+		"declerationofindependence",
+		"declerationofindependence"
 	];
 	let rng = randomInt(urlData.seed, 8645, 3);
 	let rngNum = (randomInt(urlData.seed, 4386, 10000) + "")[0];

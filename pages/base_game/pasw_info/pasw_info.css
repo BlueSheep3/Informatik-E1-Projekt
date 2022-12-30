@@ -1,15 +1,11 @@
-#Begrüßung p {
-    line-height: 0.2vh;
-}
-
 #Begrüßung {
-    margin-bottom: 15vh;
-}
-
-#Ende p {
-    line-height: 0.2vh;
+    margin-bottom: 5vh;
 }
 
 #Ende {
-    margin-top: 15vh;
+    margin-top: 5vh;
+}
+
+p#hint {
+	white-space: pre-line;
 }

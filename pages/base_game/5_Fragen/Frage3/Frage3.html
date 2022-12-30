@@ -12,7 +12,11 @@
 <body>
     <div id="text">
         <h1>Question 3:</h1>
-        <p>How many Pieces does a Chess match start with?</p>
+        <p>
+			What does<br>
+			x = x = ((x = true) ? false : !![]) ? ![] : (x ^= 1)<br>
+			evaluate to in Javascript?
+		</p>
     </div>
 </body>
 <footer>
@@ -25,7 +29,7 @@
         document.getElementById("form").onsubmit = function(event) {
           event.preventDefault();
           let value = document.getElementById("value").value.trim().toLowerCase();
-          if (value == "32" || value == "thirty two") {
+          if (value === "0" || value === "false") {
             gotoUrl("../Frage4/Frage4", "");
           } else {
             gotoUrl("../wrong/wrong", "");

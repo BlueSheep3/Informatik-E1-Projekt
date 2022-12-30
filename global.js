@@ -4,7 +4,6 @@ let urlData;
 	const urlParams = new URLSearchParams(window.location.search);
 
 	let data = urlParams.get("d") ?? "0";
-	// let opt = urlParams.get("o");
 
 	let itemDOI = parseInt(data[0]); // 0: no item, 1: has it, 2: has fake
 
@@ -19,7 +18,7 @@ let urlData;
 }
 
 function gotoUrl(url, actions) {
-	let params = `?s=${urlData.seed}&d=${urlData.data.itemDOI}&o=&a=${actions}`;
+	let params = `?s=${urlData.seed}&d=${urlData.data.itemDOI}&a=${actions}`;
 	window.location.href = url + ".html" + params;
 }
 

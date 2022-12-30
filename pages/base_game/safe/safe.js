@@ -40,14 +40,14 @@ function clickDOI() {
 
 function confirm() {
 	let passwords = [
-		"declerationofindependence",
-		"declerationofindependence",
-		"declerationofindependence"
+		"declarationofindependence",
+		// "declerationofindependence",
+		// "declerationofindependence"
 	];
-	let rng = randomInt(urlData.seed, 8645, 3);
+	// let rng = randomInt(urlData.seed, 8645, 3);
 	let rngNum = (randomInt(urlData.seed, 4386, 10000) + "")[0];
-	let correctCode = passwords[rng] + rngNum;
+	let correctCode = passwords[0/* rng */] + rngNum;
 	let input = document.getElementById("code");
-	if(input.value.trim().toLowerCase() !== "somecode") return;
+	if(input.value.trim().toLowerCase() !== correctCode) return;
 	openSafe();
 }

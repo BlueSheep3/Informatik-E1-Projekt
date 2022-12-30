@@ -11,8 +11,8 @@ let achievList = [
 	},
 	{
 		name: "Master Thief",
-		icon: "../../images/decleration_of_independence.png",
-		desc: "Steal the Decleration of Independance"
+		icon: "../../images/declaration_of_independence.png",
+		desc: "Steal the Declaration of Independence"
 	},
 	{
 		name: "Mission Complete",

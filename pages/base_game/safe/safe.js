@@ -40,7 +40,7 @@ function clickDOI() {
 
 function confirm() {
 	let passwords = [
-		"declarationofindependence",
+		"thief",
 		// "declerationofindependence",
 		// "declerationofindependence"
 	];
